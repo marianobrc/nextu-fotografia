@@ -1,0 +1,57 @@
+/* Patron tipo layout shifter implementado con flex y width porcentuales */
+.galery-row {
+    margin: 0 auto;
+    width: 85%;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.galery-col-1,
+.galery-col-2,
+.galery-col-3 {
+    width: 100%; /* Workaround para que funcione flex con imagenes en chrome */
+    height: 100%;
+    min-width: 0;
+    margin-right: 10px;
+    border: 2px solid;
+    -webkit-flex: 1; /* Safari 6.1+ */
+    -ms-flex: 1; /* IE 10 */
+    flex: 1;
+}
+
+/* Efectos / Filtros */
+.img-blur {
+    -webkit-filter: blur(10px);
+    filter: blur(10px)
+}
+
+.img-grayscale {
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+}
+
+.img-sepia {
+    -webkit-filter: sepia(90%);
+    filter: sepia(90%);
+}
+
+/* Media queries responsive para dispositivos móviles ( < 900px )*/
+@media (max-width: 899px){
+
+    /* Imagenes,en 1 columna en lugar de tres */
+
+    .galery-row {
+        display: block;
+        width:100%;
+    }
+
+    .galery-col-1
+    .galery-col-2
+    .galery-col-3 {
+        display: block;
+        width:80%;
+        margin: 5%;
+    }
+
+}
+
