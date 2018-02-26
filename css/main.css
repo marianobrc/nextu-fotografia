@@ -1,291 +1,222 @@
-/*! HTML5 Boilerplate v6.0.1 | MIT License | https://html5boilerplate.com/ */
-
-/*
- * What follows is the result of much research on cross-browser styling.
- * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
- * Kroc Camen, and the H5BP dev community and team.
- */
-
-/* ==========================================================================
-   Base styles: opinionated defaults
-   ========================================================================== */
-
 html {
+    background-color: #02010a;
     color: #222;
+    font-family: "Dancing Script";
     font-size: 1em;
     line-height: 1.4;
 }
 
-/*
- * Remove text-shadow in selection highlight:
- * https://twitter.com/miketaylr/status/12228805301
- *
- * Vendor-prefixed and regular ::selection selectors cannot be combined:
- * https://stackoverflow.com/a/16982510/7133471
- *
- * Customize the background color to match your design.
- */
-
-::-moz-selection {
-    background: #b3d4fc;
-    text-shadow: none;
+#contenido {
+    width: 900px;
+    margin: auto;
 }
 
-::selection {
-    background: #b3d4fc;
-    text-shadow: none;
+header {
+    background-color: #5b7989;
+    height: 6em;
+    border-radius: 10px 10px 0 0;
 }
 
-/*
- * A better looking default horizontal rule
- */
-
-hr {
-    display: block;
-    height: 1px;
-    border: 0;
-    border-top: 1px solid #ccc;
-    margin: 1em 0;
-    padding: 0;
+.header-content {
+    width: 100%;
+    padding: 1.5em;
+    color: white;
 }
 
-/*
- * Remove the gap between audio, canvas, iframes,
- * images, videos and the bottom of their containers:
- * https://github.com/h5bp/html5-boilerplate/issues/440
- */
-
-audio,
-canvas,
-iframe,
-img,
-svg,
-video {
-    vertical-align: middle;
+.header-content .menu-col-1 {
+    display: inline;
+    font-size: 2em;
+    text-shadow: 2px 2px #02010a;
+    text-align: left;
+    width: 50%;
+    padding-right: 20%;
 }
 
-/*
- * Remove default fieldset styles.
- */
-
-fieldset {
-    border: 0;
-    margin: 0;
-    padding: 0;
+.header-content .menu-col-2{
+    display: inline;
+    width:10%;
 }
 
-/*
- * Allow only vertical resizing of textareas.
- */
-
-textarea {
-    resize: vertical;
+.header-content .menu-col-3{
+    display: inline;
+    width:10%;
 }
 
-/* ==========================================================================
-   Browser Upgrade Prompt
-   ========================================================================== */
-
-.browserupgrade {
-    margin: 0.2em 0;
-    background: #ccc;
-    color: #000;
-    padding: 0.2em 0;
+.header-content .menu-col-4{
+    display: inline;
+    width:10%;
 }
 
-/* ==========================================================================
-   Author's custom styles
-   ========================================================================== */
+a:hover, a:active{
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* ==========================================================================
-   Helper classes
-   ========================================================================== */
-
-/*
- * Hide visually and from screen readers
- */
-
-.hidden {
-    display: none !important;
 }
 
-/*
- * Hide only visually, but have it available for screen readers:
- * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
- *
- * 1. For long content, line feeds are not interpreted as spaces and small width
- *    causes content to wrap 1 word per line:
- *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
- */
-
-.visuallyhidden {
-    border: 0;
-    clip: rect(0 0 0 0);
-    -webkit-clip-path: inset(50%);
-    clip-path: inset(50%);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    width: 1px;
-    white-space: nowrap; /* 1 */
+#central-img-container{
+    background-color: #82c3a6;
+    padding: 5%;
 }
 
-/*
- * Extends the .visuallyhidden class to allow the element
- * to be focusable when navigated to via the keyboard:
- * https://www.drupal.org/node/897638
- */
-
-.visuallyhidden.focusable:active,
-.visuallyhidden.focusable:focus {
-    clip: auto;
-    -webkit-clip-path: none;
-    clip-path: none;
-    height: auto;
-    margin: 0;
-    overflow: visible;
-    position: static;
-    width: auto;
-    white-space: inherit;
+#central-img {
+    margin: 0 auto;
+    width: 100%;
 }
 
-/*
- * Hide visually and from screen readers, but maintain layout
- */
+#secondary-img-container{
+    background-color: #d5c75f;
+    padding: 2%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
 
-.invisible {
-    visibility: hidden;
 }
 
-/*
- * Clearfix: contain floats
- *
- * For modern browsers
- * 1. The space content is one way to avoid an Opera bug when the
- *    `contenteditable` attribute is included anywhere else in the document.
- *    Otherwise it causes space to appear at the top and bottom of elements
- *    that receive the `clearfix` class.
- * 2. The use of `table` rather than `block` is only necessary if using
- *    `:before` to contain the top-margins of child elements.
- */
-
-.clearfix:before,
-.clearfix:after {
-    content: " "; /* 1 */
-    display: table; /* 2 */
+.img-col-1{
+    /* https://github.com/philipwalton/flexbugs/issues/225 */
+    width: 100%; /* Workaround para que funcione flex con imagenes en chrome */
+    height: 100%;
+    min-width: 0;
+    margin-right: 10px;
+    border: 2px solid;
+    -webkit-flex: 1; /* Safari 6.1+ */
+    -ms-flex: 1; /* IE 10 */
+    flex: 1;
 }
 
-.clearfix:after {
-    clear: both;
+.img-col-1:hover{
+    transform:rotate(10deg);
+    transition-duration: 1s;
 }
 
-/* ==========================================================================
-   EXAMPLE Media Queries for Responsive Design.
-   These examples override the primary ('mobile first') styles.
-   Modify as content requires.
-   ========================================================================== */
 
-@media only screen and (min-width: 35em) {
-    /* Style adjustments for viewports that meet the condition */
+.img-col-2{
+    /* https://github.com/philipwalton/flexbugs/issues/225 */
+    width: 100%; /* Workaround para que funcione flex con imagenes en chrome */
+    height: 100%;
+    min-width: 0;
+    margin-left: 10px;
+    border: 2px solid;
+    -webkit-flex: 1; /* Safari 6.1+ */
+    -ms-flex: 1; /* IE 10 */
+    flex: 1;
 }
 
-@media print,
-       (-webkit-min-device-pixel-ratio: 1.25),
-       (min-resolution: 1.25dppx),
-       (min-resolution: 120dpi) {
-    /* Style adjustments for high resolution devices */
+.img-col-2:hover{
+    box-shadow: 2px 2px #82c3a6; /* Sombra */
+    transform:translate(20px, -5px);
+    transition-duration: 1s;
 }
 
-/* ==========================================================================
-   Print styles.
-   Inlined to avoid the additional HTTP request:
-   http://www.phpied.com/delay-loading-your-print-css/
-   ========================================================================== */
+.img-link{
+    text-align: center;
+}
 
-@media print {
-    *,
-    *:before,
-    *:after {
-        background: transparent !important;
-        color: #000 !important; /* Black prints faster:
-                                   http://www.sanbeiji.com/archives/953 */
-        box-shadow: none !important;
-        text-shadow: none !important;
+footer{
+    background-color: #C6d5c5;
+    border-radius: 0 0 10px 10px;
+}
+
+.footer-link{
+    text-decoration: none;
+    color: black;
+}
+
+.footer-content{
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.footer-content .foot-col{
+    flex: 1;
+    text-align: center;
+}
+
+.footer-content .foot-col > ul{
+    text-align: left;
+}
+
+.footer-content .foot-col > ul > li{
+    list-style: none;
+    padding-top: 5px;
+}
+
+/* Redes sociales */
+.facebook-icon{
+    background-image: url("../img/facebook.png");
+    background-position: left center;
+    background-repeat: no-repeat;
+    padding-left: 30px;
+}
+
+.instagram-icon{
+    background-image: url("../img/instagram.png");
+    background-position: left center;
+    background-repeat: no-repeat;
+    padding-left: 30px;
+}
+
+.twitter-icon{
+    background-image: url("../img/twitter.png");
+    background-position: left center;
+    background-repeat: no-repeat;
+    padding-left: 30px;
+}
+
+/* Media queries responsive para dispositivos móviles ( < 900px )*/
+@media (max-width: 899px){
+    #contenido{
+        width:100%;
     }
 
-    a,
-    a:visited {
-        text-decoration: underline;
+    /* Margenes y alineacion general en header*/
+    .header-content{
+        padding: 0;
+        text-align: center;
     }
 
-    a[href]:after {
-        content: " (" attr(href) ")";
+    /* Titulo de la seccion */
+    .header-content .menu-col-1 {
+        display: block;
+        width: 100%;
+        padding: 2%;
     }
 
-    abbr[title]:after {
-        content: " (" attr(title) ")";
+    /* Menu */
+    .header-content .menu-col-2{
+        display: inline;
+        width:33%;
     }
 
-    /*
-     * Don't show links that are fragment identifiers,
-     * or use the `javascript:` pseudo protocol
-     */
-
-    a[href^="#"]:after,
-    a[href^="javascript:"]:after {
-        content: "";
+    .header-content .menu-col-3{
+        display: inline;
+        width:33%;
     }
 
-    pre {
-        white-space: pre-wrap !important;
-    }
-    pre,
-    blockquote {
-        border: 1px solid #999;
-        page-break-inside: avoid;
+    .header-content .menu-col-4{
+        display: inline;
+        width:33%;
     }
 
-    /*
-     * Printing Tables:
-     * http://css-discuss.incutio.com/wiki/Printing_Tables
-     */
+    /* Imagenes,en 1 columna en lugar de dos */
 
-    thead {
-        display: table-header-group;
+    #secondary-img-container {
+        display: block;
     }
 
-    tr,
-    img {
-        page-break-inside: avoid;
+    .img-col-1{
+        width:80%;
+        margin: 5%;
     }
 
-    p,
-    h2,
-    h3 {
-        orphans: 3;
-        widows: 3;
+    .img-col-2{
+        width:80%;
+        margin: 5%;
     }
 
-    h2,
-    h3 {
-        page-break-after: avoid;
+    .footer-content,
+    .foot-col{
+        display: block;
+        width:100%;
     }
+
 }
+
