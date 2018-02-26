@@ -47,8 +47,9 @@ header {
     width:10%;
 }
 
-a:hover, a:active{
-
+.menu-link:hover,
+.menu-link:active{
+    text-decoration: none; /* Sin subrayado */
 }
 
 #central-img-container{
