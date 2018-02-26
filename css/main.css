@@ -1,3 +1,5 @@
+
+/* General */
 html {
     background-color: #02010a;
     color: #222;
@@ -11,6 +13,7 @@ html {
     margin: auto;
 }
 
+/* Header y Menues */
 header {
     background-color: #5b7989;
     height: 6em;
@@ -52,6 +55,11 @@ header {
     text-decoration: none; /* Sin subrayado */
 }
 
+.menu-selected{
+    text-decoration: none!important;
+}
+
+/* Imagen princiapal */
 #central-img-container{
     background-color: #82c3a6;
     padding: 5%;
@@ -62,6 +70,7 @@ header {
     width: 100%;
 }
 
+/* Imagenes secundarias */
 #secondary-img-container{
     background-color: #d5c75f;
     padding: 2%;
@@ -111,6 +120,7 @@ header {
     text-align: center;
 }
 
+/* Footer */
 footer{
     background-color: #C6d5c5;
     border-radius: 0 0 10px 10px;
